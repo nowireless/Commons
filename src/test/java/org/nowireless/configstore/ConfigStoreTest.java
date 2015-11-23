@@ -3,7 +3,6 @@ package org.nowireless.configstore;
 import java.io.File;
 
 import org.nowireless.common.Util;
-import org.nowireless.configstore.mstore.ConfigCollection;
 import org.nowireless.mstore.MStore;
 import org.nowireless.mstore.MStoreUser;
 

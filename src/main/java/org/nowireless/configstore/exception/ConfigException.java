@@ -1,4 +1,4 @@
-package org.nowireless.configstore;
+package org.nowireless.configstore.exception;
 
 
 public class ConfigException extends Exception {

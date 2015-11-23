@@ -7,6 +7,6 @@ import org.nowireless.mstore.store.Entity;
  * @author nowireless
  *
  */
-public abstract class Config<T extends Config<T>> extends Entity<T>{
-
+public abstract class Config<T extends Config<T>> extends Entity<T> {
+	
 }
