@@ -22,14 +22,14 @@ public abstract class ConfigCollection<T extends Config<T>> extends Coll<T> {
 	public void init() {
 		super.init();
 		
-		this.getDefault();
+		//this.getDefault();
 	}
 	
 	public T getDefault() {
 		T config = this.get(DEFAULT);
 		if(config != null) return config;
 		
-		this.create(DEFAULT);
+		config = this.create(DEFAULT);
 		
 		this.setDeault(config);
 		
