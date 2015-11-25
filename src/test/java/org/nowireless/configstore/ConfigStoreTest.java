@@ -1,8 +1,10 @@
 package org.nowireless.configstore;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.nowireless.common.Util;
+import org.nowireless.common.util.Utilities;
 import org.nowireless.mstore.MStore;
 import org.nowireless.mstore.MStoreUser;
 
@@ -13,7 +15,7 @@ public class ConfigStoreTest implements MStoreUser {
 	
 	@Override
 	public Gson getGson() {
-		return Util.getGsonBuilder().create();
+		return Utilities.getGsonBuilder().create();
 	}
 
 	@Override
@@ -23,6 +25,7 @@ public class ConfigStoreTest implements MStoreUser {
 	
 	public static class TestConfig extends Config<TestConfig> {
 		public boolean test = true;
+		List<String> list;
 	}
 	
 	public static class TestConfigCollection extends ConfigCollection<TestConfig> {
@@ -40,7 +43,15 @@ public class ConfigStoreTest implements MStoreUser {
 		TestConfigCollection collection = new TestConfigCollection(test);
 		collection.init();
 		MStore.collTick();
-		TestConfig config = collection.create();
+		TestConfig config = collection.get("The Config");
+		config.test = false;
+		
+		//config.list = new ArrayList<>();
+		//config.list.add("Test!");
+		
+		if(config.list != null) System.out.println(config.list);
+		
+		config.changed();
 		MStore.collTick();
 		System.out.println(config.test);
 		MStore.collTick();
