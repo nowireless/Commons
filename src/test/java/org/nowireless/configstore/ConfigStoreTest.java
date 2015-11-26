@@ -1,7 +1,5 @@
 package org.nowireless.configstore;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.nowireless.common.util.Utilities;
@@ -17,18 +15,13 @@ public class ConfigStoreTest implements MStoreUser {
 	public Gson getGson() {
 		return Utilities.getGsonBuilder().create();
 	}
-
-	@Override
-	public File getDataFolder() {
-		return null;
-	}
 	
 	public static class TestConfig extends Config<TestConfig> {
 		public boolean test = true;
 		List<String> list;
 	}
 	
-	public static class TestConfigCollection extends ConfigCollection<TestConfig> {
+	public static class TestConfigCollection extends ConfigStore<TestConfig> {
 
 		public TestConfigCollection(MStoreUser user) {
 			super("testconfig", TestConfig.class, user);

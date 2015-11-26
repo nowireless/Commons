@@ -4,11 +4,12 @@ import org.nowireless.mstore.MStore;
 import org.nowireless.mstore.MStoreUser;
 import org.nowireless.mstore.store.Coll;
 
-public abstract class ConfigCollection<T extends Config<T>> extends Coll<T> {
+public abstract class ConfigStore<T extends Config<T>> extends Coll<T> {
 	
-	public static final String DEFAULT = "default";
+	public static final String INSTANCE = "instance";
+	public static final String DEFAULT= "default";
 	
-	protected ConfigCollection(String basename,Class<T> clazz, MStoreUser user) {
+	protected ConfigStore(String basename,Class<T> clazz, MStoreUser user) {
 		super(basename, clazz, MStore.getDb(), user);
 	}
 	
