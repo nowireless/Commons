@@ -15,6 +15,7 @@ public abstract class EngineWatcherAbstract extends EngineAbstract implements En
 	private transient volatile long lastCheckIn = 0;
 	private transient volatile long delta = 0;
 	private transient volatile boolean isLocked = false;
+	private transient volatile boolean isEnabled = true;
 	private transient long timeOut;
 	private transient long sleep;
 	private transient Logger log;
@@ -34,6 +35,7 @@ public abstract class EngineWatcherAbstract extends EngineAbstract implements En
 		this.sleep = sleep;
 		this.engine = engine;
 		log = LogManager.getLogger(this.getEngineName());
+		this.enable();
 	}
 	
 	@Override public abstract void overDue();
@@ -83,10 +85,29 @@ public abstract class EngineWatcherAbstract extends EngineAbstract implements En
 	}
 	
 	@Override
+	public void enable() {
+		log.trace("Enabled");
+		this.isEnabled = true;
+		lastCheckIn = System.currentTimeMillis();
+	}
+	
+	@Override
+	public void disable() {
+		log.trace("Disabled");
+		this.isEnabled = false;
+	}
+	
+	@Override
+	public boolean isEnabled() {
+		return this.isEnabled;
+
+	}
+	
+	@Override
 	public final void runTask() {
 		delta = System.currentTimeMillis() - lastCheckIn;
 		
-		if(delta > timeOut) {
+		if(isEnabled && delta > timeOut) {
 			log.warn("Engine: {} is {} mS overdue", engine.getEngineName(), delta);
 			this.isLocked = true;
 			this.overDue();

@@ -41,7 +41,23 @@ public interface EngineWatcher extends Engine, LoggerProvidor {
 	
 	/**
 	 * Checks to see if the watched {@link Engine} is locked up.
-	 * @return
+	 * @return whether the engine is locked up
 	 */
 	public boolean isLocked();
+	
+	/**
+	 * Enables the watcher
+	 */
+	public void enable();
+	
+	/**
+	 * Disables the watcher
+	 */
+	public void disable();
+	
+	/**
+	 * Whether the watcher is enabled
+	 * @return enabled state
+	 */
+	public boolean isEnabled();
 }
