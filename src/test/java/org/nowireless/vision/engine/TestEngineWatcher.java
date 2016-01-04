@@ -6,7 +6,7 @@ import org.nowireless.common.engine.impl.EngineWatcherAbstract;
 public class TestEngineWatcher extends EngineWatcherAbstract {
 
 	public TestEngineWatcher(long timeout, long sleep, Engine engine) {
-		super(timeout, sleep, engine);
+		super(timeout, sleep, engine, "TestEngineWatcher");
 	}
 
 	@Override

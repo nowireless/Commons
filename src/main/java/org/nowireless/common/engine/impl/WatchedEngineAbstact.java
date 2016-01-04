@@ -13,7 +13,7 @@ public abstract class WatchedEngineAbstact extends EngineAbstract implements Wat
 	private class InternalThreadWatcher extends EngineWatcherAbstract {
 
 		public InternalThreadWatcher(long timeout) {
-			super(timeout, 20, WatchedEngineAbstact.this);
+			super(timeout, 150, WatchedEngineAbstact.this, WatchedEngineAbstact.this.getEngineName()+"-watcher");
 		}
 
 		@Override
@@ -36,10 +36,6 @@ public abstract class WatchedEngineAbstact extends EngineAbstract implements Wat
 	}
 	
 	private final EngineWatcher watcher;
-	
-	public WatchedEngineAbstact(long timeout) {
-		watcher = new InternalThreadWatcher(timeout);
-	}
 	
 	public WatchedEngineAbstact(long timeout, String threadName) {
 		super(threadName);

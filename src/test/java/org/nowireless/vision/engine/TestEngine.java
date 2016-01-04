@@ -6,6 +6,10 @@ import org.nowireless.common.engine.impl.EngineAbstract;
 
 public class TestEngine extends EngineAbstract {
 
+	public TestEngine() {
+		super("TestEngine");
+	}
+
 	private final Logger log = LogManager.getLogger(this.getClass().getSimpleName());
 	
 	@Override

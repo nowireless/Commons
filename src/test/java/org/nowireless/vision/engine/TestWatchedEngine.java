@@ -5,7 +5,7 @@ import org.nowireless.common.engine.impl.WatchedEngineAbstact;
 public class TestWatchedEngine extends WatchedEngineAbstact {
 
 	public TestWatchedEngine(long timeout) {
-		super(timeout);
+		super(timeout, "TestWatchedEngine");
 	}
 
 	@Override

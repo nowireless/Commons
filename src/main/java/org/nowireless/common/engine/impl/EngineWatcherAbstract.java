@@ -21,9 +21,6 @@ public abstract class EngineWatcherAbstract extends EngineAbstract implements En
 	private transient Logger log;
 	private transient Engine engine;
 	
-	public EngineWatcherAbstract(long timeout, long sleep, Engine engine) {
-		this.setUp(timeout, sleep, engine);
-	}
 	
 	public EngineWatcherAbstract(long timeout, long sleep, Engine engine, String threadName) {
 		super(threadName);
