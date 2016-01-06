@@ -8,7 +8,6 @@
         <version>1.0</version>
     </parent>
 	
-	<groupId>org.nowireless</groupId>
 	<artifactId>Common</artifactId>
 	<packaging>jar</packaging>
 	<name>Common apis and other useful things</name>

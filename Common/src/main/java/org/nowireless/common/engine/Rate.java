@@ -1,7 +1,5 @@
 package org.nowireless.common.engine;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.nowireless.common.Initializable;
 
 /**
@@ -12,9 +10,9 @@ import org.nowireless.common.Initializable;
  */
 public class Rate implements Initializable {
 
-	private volatile long start_;
+	//private volatile long start_;
 	private final long expected_cycle_time_;
-	private final Logger log = LogManager.getLogger("Rate");
+	//private final Logger log = LogManager.getLogger("Rate");
 	
 	public Rate(long rateTime) {
 		this.expected_cycle_time_ = rateTime;
@@ -26,7 +24,7 @@ public class Rate implements Initializable {
 	
 	@Override
 	public void init() {
-		start_ = System.currentTimeMillis();
+		//start_ = System.currentTimeMillis();
 	}
 	
 	@Override
