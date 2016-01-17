@@ -1,4 +1,4 @@
-package org.nowireless.common.util;
+package org.nowireless.configstore;
 
 import com.google.gson.GsonBuilder;
 

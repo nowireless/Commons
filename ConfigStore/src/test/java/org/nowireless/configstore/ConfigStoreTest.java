@@ -2,7 +2,6 @@ package org.nowireless.configstore;
 
 import java.util.List;
 
-import org.nowireless.common.util.Utilities;
 import org.nowireless.mstore.MStore;
 import org.nowireless.mstore.MStoreUser;
 
