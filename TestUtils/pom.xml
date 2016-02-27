@@ -5,7 +5,7 @@
 	<parent>
         <groupId>org.nowireless</groupId>
         <artifactId>Commons</artifactId>
-        <version>1.0</version>
+        <version>1.1</version>
     </parent>
 	<groupId>org.nowireless.vision</groupId>
 	<artifactId>TestUtils</artifactId>
