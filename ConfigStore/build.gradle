@@ -1,7 +1,7 @@
 
 description = 'Config storage'
 dependencies {
-    compile group: 'org.nowireless', name: 'MStore', version:'0.0.3-SNAPSHOT'
+  compile group: 'org.nowireless', name: 'MStore', version:'0.0.3-SNAPSHOT'
   compile project(':Common')
-    compile group: 'com.google.code.gson', name: 'gson', version:'2.3.1'
+  compile group: 'com.google.code.gson', name: 'gson', version:'2.3.1'
 }
