@@ -2,3 +2,8 @@
 .classpath
 .project
 .settings/
+.gradle/
+ConfigStore/build/
+Common/build/
+TestUtils/build/
+NativeHelper/build/

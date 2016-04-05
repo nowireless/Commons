@@ -1,0 +1,10 @@
+rootProject.name = 'Commons'
+include ':Common'
+include ':ConfigStore'
+include ':TestUtils'
+include ':NativeHelper'
+
+project(':Common').projectDir = "$rootDir/Common" as File
+project(':ConfigStore').projectDir = "$rootDir/ConfigStore" as File
+project(':TestUtils').projectDir = "$rootDir/TestUtils" as File
+project(':NativeHelper').projectDir = "$rootDir/NativeHelper" as File
