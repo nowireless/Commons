@@ -1,7 +1,7 @@
 package org.nowireless.common.engine;
 
 import org.nowireless.common.Initializable;
-import org.nowireless.common.LoggerProvidor;
+import org.nowireless.common.LoggerProvider;
 import org.nowireless.common.Task;
 
 /**
@@ -9,7 +9,7 @@ import org.nowireless.common.Task;
  * @author nowireless
  *
  */
-public interface Engine extends Runnable, Task, Initializable, LoggerProvidor {
+public interface Engine extends Runnable, Task, Initializable, LoggerProvider {
 	
 	/**
 	 * Starts the engine.

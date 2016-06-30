@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
  * @author nowireless
  *
  */
-public interface LoggerProvidor {
+public interface LoggerProvider {
 	
 	/**
 	 * Gets the logger

@@ -1,6 +1,6 @@
 package org.nowireless.common.engine;
 
-import org.nowireless.common.LoggerProvidor;
+import org.nowireless.common.LoggerProvider;
 
 /**
  * The Engine watcher is used to detect if a {@link Engine} thread has become locked.
@@ -9,7 +9,7 @@ import org.nowireless.common.LoggerProvidor;
  * @author nowireless
  *
  */
-public interface EngineWatcher extends Engine, LoggerProvidor {
+public interface EngineWatcher extends Engine, LoggerProvider {
 	
 	/**
 	 * Tells the watcher the watched engine checked in.
